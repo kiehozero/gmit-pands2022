@@ -6,17 +6,17 @@
 # • Between 60% and 69% => Merit 1
 # • Over 70% => Distinction
 
-grade = float ( input ( "Enter the percentage: ") )
+grade = round ( float ( input ( "Enter the percentage: ") ) )
 
 if ( grade <= 40 ) :
-    print( "Fail" )
+    print( "Grade {}: Fail".format ( grade ) )
 elif ( grade <= 49 ) :
-    print ( "Pass" )
+    print ( "Grade {}: Pass".format ( grade ) )
 elif ( grade <= 59 ) :
-    print ( "Merit 2" )
+    print ( "Grade {}: Merit 2".format ( grade ) )
 elif ( grade <= 69 ) :
-    print ( "Merit 1" )
+    print ( "Grade {}: Merit 1".format ( grade ) )
 else:
-    print ( "Distinction" )
+    print ( "Grade {}: Distinction".format ( grade ) )
 
 # Answer moved the <= 40 statement to elif, and made the initial if statement an error handler to remove anything lower than 0 or over 100
