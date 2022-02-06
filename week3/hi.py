@@ -1,0 +1,1 @@
+print('John said\t"hi"\nI said\t\t"bye"')
