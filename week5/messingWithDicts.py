@@ -12,7 +12,8 @@ car = {
     "owner" : {
         "name" : "andrew" ,
         "number" : "1123"
-    }
+    } ,
+    "tags" : ["pre-owned", "needs tlc", "certified seller"]
 }
 
 print ( car [ "owner" ] [ "name" ] )
@@ -23,3 +24,9 @@ print ( car.keys ( ) )
 print ( car [ "owner" ].keys ( ) )
 # items will return each key-value pair as a Tuple within a List
 print ( car.items ( ) )
+
+for x, y in car.items ( ) :
+    print ( x , y )
+
+for key in car:
+    print ( key , "is" , car[key] )
