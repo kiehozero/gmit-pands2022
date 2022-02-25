@@ -18,8 +18,11 @@ student = {
     } ]
 }
 
-input("Enter a module: ")
-
-print ( "Student: {}".format ( student [ "name" ] ) )
-for module in student ["modules" ] :
-    print ("\t {} \t: {}".format( module [ "courseName" ], module ["grade"] ) )
+courses = [ ]
+for module in student["modules"]:
+    courses.append ( module [ "courseName" ] )
+requiredCourse = input ( "Enter a module from the following list:\n{}: ".format ( courses ) )
+print(courses)
+print(requiredCourse)
+# for x, y in student [ "modules" ][ requiredCourse ] :
+#     print ( "\t {} \t: {}".format ( module [ "courseName" ] , module [ "grade" ] ) )
