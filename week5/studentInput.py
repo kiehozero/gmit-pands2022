@@ -18,11 +18,24 @@ student = {
     } ]
 }
 
-courses = [ ]
-for module in student["modules"]:
+# appends a list of courses to a blank list
+courses = [ ] 
+for module in student [ "modules" ] :
     courses.append ( module [ "courseName" ] )
-requiredCourse = input ( "Enter a module from the following list:\n{}: ".format ( courses ) )
-print(courses)
-print(requiredCourse)
-# for x, y in student [ "modules" ][ requiredCourse ] :
-#     print ( "\t {} \t: {}".format ( module [ "courseName" ] , module [ "grade" ] ) )
+
+welcome = input ( " Hello {}, please type c to see a list or courses, or q to quit: ".format ( student [ "name" ] ) )
+
+while welcome == "c":
+    reqCourse = input ( "Please select a course from the list below, or type q to quit.\n {}:".format ( courses ) )
+    if reqCourse != "q":
+        try:
+            # find the required course as an index value within the list of all courses
+            locCourse = courses.index ( reqCourse )
+            # prints the course grade
+            print ( "Your grade for {} is {}.".format ( reqCourse , student [ "modules" ] [ locCourse ] [ "grade" ] ) )
+        except:
+            print ( "Course not found. Please try again." )
+    else:
+        break
+
+print ( "End" )

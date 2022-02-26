@@ -8,7 +8,7 @@ student = {
     "History" : 99
     }
 
-print(student)
+print ( student )
 
 # actual answer below
 
@@ -26,5 +26,5 @@ student = {
 }
 
 print ( "Student: {}".format ( student [ "name" ] ) )
-for module in student ["modules" ] :
+for module in student [ "modules" ] :
     print ("\t {} \t: {}".format( module [ "courseName" ], module ["grade"] ) )
