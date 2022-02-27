@@ -9,12 +9,23 @@ def displayMenu ( ) :
     return userChoice
 
 def doAdd ( ) :
-    # press a
-    pass
+    studentName = input ( "Type the student's name and press enter: ")
+    students.append ( { "name" : studentName , "modules" : [ ] } )
 
 def doView ( ) :
-    # press v
-    pass
+    print ( "This will be a list of students" )
+    print ( students )
+
 
 choice = displayMenu ( )
-print ( f"You chose {choice}" )
+students = []
+
+while (choice != "q" ) :
+    if choice == "a" :
+        doAdd ( )
+    elif choice == "v" :
+        doView ( )
+    else:
+        print ( "Invalid selection" )
+    choice = displayMenu ( )
+
