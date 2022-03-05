@@ -3,6 +3,6 @@
 from math import cos
 # import math as m
 # above allows you to redefine the library for convenience
-var = math.cos ( 90 )
+var = cos ( 90 )
 
 print ( var )
