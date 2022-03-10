@@ -46,10 +46,8 @@ def doView ( students ) :
         displayModules ( currentStudent [ "modules" ] )
 
 def doLoad ( ) :
-    # filename = "students.json"
-    # with open ( filename , "r+" ) as f:
-    #     return json.load ( f )
-    print ("load")
+    with open ( filename , "rt" ) as f:
+        return json.load ( f )
 
 def doSave ( students ) :
     with open ( filename , "wt" ) as f:

@@ -4,15 +4,18 @@
 import studentsUtil as s
 
 students = []
+
+menuChoice = {
+    "a" : s.doAdd ,
+    "v" : s.doView ,
+    "s" : s.doSave ,
+}
+
 choice = s.displayMenu ( )
 
 while (choice != "q" ) :
-    if choice == "a" :
-        s.doAdd ( students )
-    elif choice == "v" :
-        s.doView ( students )
-    elif choice == "s" :
-        s.doSave ( students )
+    if choice in menuChoice :
+        menuChoice [ choice ] ( students )
     elif choice == "l" :
         students = s.doLoad ( )
     else:
