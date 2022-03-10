@@ -11,6 +11,10 @@ while (choice != "q" ) :
         s.doAdd ( students )
     elif choice == "v" :
         s.doView ( students )
+    elif choice == "s" :
+        s.doSave ( students )
+    elif choice == "l" :
+        students = s.doLoad ( )
     else:
         print ( "Invalid selection" )
     choice = s.displayMenu ( )

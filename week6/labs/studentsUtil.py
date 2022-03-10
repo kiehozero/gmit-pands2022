@@ -1,12 +1,18 @@
 # function storage for student input file
 
+import json
+
+filename = "students.json"
+
 def displayMenu ( ) :
     print ( "What would you like to do?")
     print ( "\t (a) Add new student" )
     print ( "\t (v) View students" )
+    print ( "\t (s) Save file" )
+    print ( "\t (l) Load File" )
     print ( "\t (q) Quit")
     userChoice = input (
-        "Type one letter (a/v/q): "
+        "Type one letter (a/v/s/l/q): "
         )
     return userChoice
 
@@ -38,3 +44,14 @@ def doView ( students ) :
     for currentStudent in students :
         print ( currentStudent [ "name" ] )
         displayModules ( currentStudent [ "modules" ] )
+
+def doLoad ( ) :
+    # filename = "students.json"
+    # with open ( filename , "r+" ) as f:
+    #     return json.load ( f )
+    print ("load")
+
+def doSave ( students ) :
+    with open ( filename , "wt" ) as f:
+        json.dump ( students , f )
+    print ( "doSave" )
