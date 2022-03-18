@@ -51,3 +51,13 @@ print(f"Arr has {dims} dimensions")
 # you can access array elements using comma-separated integers
 # note the zeroes below are because of the additional dimensions specified by ndmin
 print(f"The third element on the first row of the fourth dimension is {arr[0,0,1,3]}")
+
+# it is possible to slice each section of an array and return it
+
+thisArray = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+
+# this will return everything except the first item from all row
+print(thisArray[0:,1:])
+
+# this prints the first and second items from each row
+print(thisArray[0:,1:3])
