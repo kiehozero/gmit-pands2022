@@ -15,7 +15,8 @@ try:
 # it is wise to write except statements for particular errors or scenarios to make life easier when debugging
 except FileNotFoundError:
     print(f"No file with the name {file} was located")
+# you can create custom errors
 except:
-    print("Some other error")
+    raise Exception("Sorry, some other error")
 finally:
     print("This will always be printed")
