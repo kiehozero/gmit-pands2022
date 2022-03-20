@@ -6,7 +6,7 @@ ypoints = xpoints * xpoints
 
 # can plot multiple items in one file
 plt.plot(xpoints,ypoints,label="test label")
-plt.plot(xpoints,xpoints,label="straight", color="blue")
+plt.plot(xpoints,xpoints,label="straight", color="blue", marker=">")
 plt.legend()
 
 # saves file to current location, using show() will open the file
