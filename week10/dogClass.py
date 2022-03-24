@@ -8,11 +8,12 @@ class Dog:
     species = "Canis Familiaris"
 
     # all classes must have an init method. This sets the initial state of an object when a new instance is created
-    def __init__(self, name, age):
+    def __init__(self, name, age, breed):
         # init can contain any number of parameters. The value of these parameters are known as attributes once the
         # instance is created. Creating a new object is also known as instantiation.
         self.name = name
         self.age = age
+        self.breed = breed
 
     # classes can also contain methods
     def description(self):
@@ -21,8 +22,22 @@ class Dog:
     def __str__(self):
         return f"{self.name} is {self.age} years old."
 
-buddy = Dog("Buddy", 9)
-miles = Dog("Miles", 4)
+
+# this will be a child class of Dog
+class SharPei(Dog):
+    pass
+
+class GoldenRetriever(Dog):
+    pass
+
+class Boxer(Dog):
+    pass
+
+buddy = GoldenRetriever("Buddy", 9, "Golden Retriever")
+dixie = SharPei("Dixie", 6, "Shar Pei")
+miles = Boxer("Miles", 4, "Boxer")
+
+
 
 # below will print the memory location of the item if the __str__ method is not included in the class. The output 
 # would read: "<__main__.Dog object at 0x000001FE86095BB0>"
@@ -36,3 +51,4 @@ print(miles.species)
 print(miles.description())
 # this is identical to the above, using __str__ allows you to manipulate the default value that is returned
 print(miles)
+print(dixie)
