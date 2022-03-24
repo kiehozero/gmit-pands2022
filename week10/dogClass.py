@@ -25,7 +25,10 @@ class Dog:
 
 # this will be a child class of Dog
 class SharPei(Dog):
-    pass
+    # __init__ will override the parent __init__, so you need to call that to bring it in as well and also bring in new items
+    def __init__(self, name, age, breed, color):
+        Dog.__init__(self, name, age, breed)
+        self.color = color
 
 class GoldenRetriever(Dog):
     pass
@@ -34,7 +37,7 @@ class Boxer(Dog):
     pass
 
 buddy = GoldenRetriever("Buddy", 9, "Golden Retriever")
-dixie = SharPei("Dixie", 6, "Shar Pei")
+dixie = SharPei("Dixie", 6, "Shar Pei", "Blue")
 miles = Boxer("Miles", 4, "Boxer")
 
 
@@ -51,4 +54,4 @@ print(miles.species)
 print(miles.description())
 # this is identical to the above, using __str__ allows you to manipulate the default value that is returned
 print(miles)
-print(dixie)
+print(dixie.color)
