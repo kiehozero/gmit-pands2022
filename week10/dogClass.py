@@ -1,8 +1,3 @@
-from unicodedata import name
-
-from paramiko import Agent
-
-
 class Dog:
     # class attributes can be defined and are the same for all instances of that class, and must contain a value
     species = "Canis Familiaris"
