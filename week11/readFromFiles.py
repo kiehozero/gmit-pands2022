@@ -16,7 +16,7 @@ df.to_excel(workbookFileName, sheet_name='activities', index=False)
 ds_staff = dataManipulation.getSeriesOfUnique(df, 'Staff (delimited)')
 
 #print (ds_staff) # debug I should use logging
-# we have to use a different engin (openpyxl) to append to the book
+# we have to use a different engine (openpyxl) to append to the book
 with pd.ExcelWriter(workbookFileName, engine='openpyxl', mode='a') as writer:
     ds_staff.to_excel(writer, sheet_name="staff", index=False)
 
