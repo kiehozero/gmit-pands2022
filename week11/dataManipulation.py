@@ -12,13 +12,14 @@ import re
 
 def getSeriesOfUnique(dataFrame, nameOfCol, delim = '/'):
 
-    # drop na gets rid of the values in the series that have no value
+    # dropna gets rid of the values in the series that have no value
     # this actually returns a numpy.ndarray
     valuesWithDelims = dataFrame[nameOfCol].dropna().unique()
 
     # iterate through it and break up the delimited values
     # I am using a set becaue this will remove duplicates as I add them
     # yes I am sure there is a more efficient way of doing this
+    # p.s. sets do not allow duplicate values
     uniqueValues = set([])  # empty set
     for valueInCol in valuesWithDelims:
         #print (staff, ":", type(staff)) # for debugging
@@ -59,7 +60,7 @@ def randomiseDataOnCol(df, columnName):
 def randomiseDataOnList(df, oldList):
     newList = oldList.copy()
     random.shuffle(newList)
-    #print(oldList) # debug checkig they are different
+    #print(oldList) # debug checking they are different
     #print(newList) # debug
     df.replace(oldList, newList, inplace=True, regex=True)
 
