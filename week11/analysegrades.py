@@ -26,7 +26,7 @@ print(meanValues)
 # re-structures the data into the format required to properly populate the graph
 df = df.pivot(index='name',columns='subject',values='grade')
 
-# print a correlation table 
+# print a correlation table, this is fairly rudimentary for this particular dataset but illustrates the basics 
 print(df.corr())
 
 
