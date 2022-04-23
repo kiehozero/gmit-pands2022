@@ -8,7 +8,7 @@
 
 import pandas as pd
 
-listDAta= [
+listData= [
     ['John', 'math',        23],
     ['John', 'programming', 66],
     ['Mary', 'math',        45],
@@ -22,7 +22,7 @@ listDAta= [
 
 ]
 
-df = pd.DataFrame(listDAta, columns=['name','subject','grade'])
+df = pd.DataFrame(listData, columns=['name','subject','grade'])
 print(df.head(3))
 
 print(df.describe())
