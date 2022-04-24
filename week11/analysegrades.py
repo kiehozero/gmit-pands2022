@@ -1,5 +1,4 @@
 # in this program I do some basic analysis of the grades.csv
-# author: Andrew Beatty
 
 import pandas as pd
 import matplotlib.pyplot as plt
