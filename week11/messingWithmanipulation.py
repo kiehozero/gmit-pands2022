@@ -1,10 +1,8 @@
 # demonstrate reading from TSV and excel
-# Author Andrew Beatty
 
 import pandas as pd
 import re
 import numpy as np
-import dataManipulation
 
 filename = 'originalData.tsv'
 
